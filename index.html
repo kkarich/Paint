@@ -5,6 +5,7 @@
     <title>Sketch.js - Simple Canvas-based Drawing for jQuery</title>
     <script src="http://code.jquery.com/jquery-latest.js"></script>
     <script src='lib/sketch.js'></script>
+    <script src='lib/converter.js'></script>
   </head>
   <body>
     <div id='wrapper'>
@@ -16,6 +17,8 @@
         $(function() {
           $('#paint-canvas').sketch();
         });
+        
+        window.converter = new Converter($('#paint-canvas')[0], $('#draw-canvas')[0 ], 20,20);
         
       </script>
     </div>
