@@ -18,7 +18,10 @@
           $('#paint-canvas').sketch();
         });
         
-        window.converter = new Converter($('#paint-canvas')[0], $('#draw-canvas')[0 ], 40,40);
+        var converter = new Converter($('#paint-canvas')[0], $('#draw-canvas')[0 ], 40,40);
+        setInterval(function() {
+            converter.convert();
+        }, 100);
         
       </script>
     </div>
